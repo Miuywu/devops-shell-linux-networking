@@ -1,0 +1,1 @@
+Directory for day 3 project at holberton school.
