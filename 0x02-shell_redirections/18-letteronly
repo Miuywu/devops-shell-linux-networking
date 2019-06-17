@@ -1,2 +1,2 @@
 #!/bin/bash
-fgrep [:alpha:]* /etc/ssh/sshd_config
+fgrep [[:alpha:]]* /etc/ssh/sshd_config
