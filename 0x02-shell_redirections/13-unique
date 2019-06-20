@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -Eo '(\b.+) \1\b' | 
+echo $PATH | tr ':' "\n" | wc -l
