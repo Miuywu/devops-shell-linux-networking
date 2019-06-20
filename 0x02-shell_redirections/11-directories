@@ -1,6 +1,2 @@
 #!/bin/bash
-<<<<<<< HEAD
-ls -1R | grep "^d" | wc -1
-=======
-ls -lRa . | grep */ | wc -l
->>>>>>> 40825fd598d88e760f33936c8d8b2ced3accd615
+find ./* -type d -print | wc -l
