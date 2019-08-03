@@ -1,4 +1,4 @@
-# 0x01-shell_redirections
+# 0x02-shell_redirections
 
 This project done at Holberton school San Francisco, demonstrates my basic ability to write bash scripts that run builtin commands in ubuntu terminal.
 
