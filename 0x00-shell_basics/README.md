@@ -9,6 +9,7 @@ BASH shell is needed to execute these scripts.
 ## Installatio & Use
 
 To use these bash scripts :
+
 0. Open up terminal
 1. Clone this repository
 2. Move into the directory which was just cloned
