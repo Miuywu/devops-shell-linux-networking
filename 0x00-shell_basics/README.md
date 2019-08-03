@@ -6,7 +6,7 @@ This project done at Holberton school San Francisco, demonstrates my basic abili
 
 BASH shell is needed to execute these scripts.
 
-## Installatio & Use
+## Installation & Use
 
 To use these bash scripts :
 
