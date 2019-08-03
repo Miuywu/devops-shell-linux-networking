@@ -1,4 +1,4 @@
-# 0x00-shell_permissions
+# 0x01-shell_permissions
 
 This project done at Holberton school San Francisco, demonstrates my basic ability to write bash scripts that run builtin commands in ubuntu terminal.
 
