@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#echos Holberton School * 10
+hr=0
+while [ $hr -lt 13 ]
+do
+    echo "Hour:" $hr
+    min=1
+    while [ $min -lt 60 ]
+    do
+      echo $min
+      ((min++))
+    done
+    ((hr++))
+done
