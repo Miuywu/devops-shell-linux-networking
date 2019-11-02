@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#echos Holberton School * 10
+a=0
+while [ $a -lt 10 ]
+do
+      echo "Holberton School"
+      ((a++))
+done
