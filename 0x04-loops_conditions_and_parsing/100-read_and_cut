@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# echos each line of /etc/password with certain info cut out
+while read -r line
+do
+    echo "$line" | cut -d: -f1,3,6
+done < /etc/passwd
