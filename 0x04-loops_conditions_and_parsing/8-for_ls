@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# ls, but we don't print numbers before a dash
+
+for file in *
+do
+    file=${file#*-}
+    echo "$file"
+done
