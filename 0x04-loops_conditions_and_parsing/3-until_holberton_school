@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#echos Holberton School * 10
+i=9
+until [ $i -lt 0 ];
+do
+      echo "Holberton School"
+      ((i--))
+done
