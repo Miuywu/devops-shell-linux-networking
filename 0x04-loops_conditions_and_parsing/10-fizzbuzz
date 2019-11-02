@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# prints 1-100, replacing multiples of 3, 5 and 15 with Fizz, Buzz and FizzBuzz
+n=1
+while [ $n -lt 101 ]
+do
+    if [ $((n % 15)) == 0 ]
+	then
+	    echo "FizzBuzz"
+	elif [ $((n % 3)) == 0 ]
+	then
+	    echo "Fizz"
+	elif [ $((n % 5)) == 0 ]
+	then
+	    echo "Buzz"
+	else
+	    echo $n
+	fi
+    (( n++ ))
+done
