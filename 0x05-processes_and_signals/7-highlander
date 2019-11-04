@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#prints a message indefinitely and has a trap
+a=1
+while [ $a -eq 1 ]
+do
+    trap 'echo "I am invincible!!!"' SIGTERM
+    echo "To infinity and beyond"
+    sleep 2
+done
