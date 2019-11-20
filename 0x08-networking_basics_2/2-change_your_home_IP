@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # (re)config 2 address resolutions
 cp /etc/hosts ~/hosts.new
 sed -i 's/127.0.0.1/127.0.0.2/g' ~/hosts.new
