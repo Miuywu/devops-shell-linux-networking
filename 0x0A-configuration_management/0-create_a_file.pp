@@ -1,3 +1,5 @@
+# puppet a file to /tmp
+
 file { '/tmp/holberton':
     owner   => 'www-data',
     group   => 'www-data',
