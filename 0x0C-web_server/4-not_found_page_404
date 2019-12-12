@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# configures a new Ubuntu serve to respect Holberton nginx requirements
+sudo apt-get update
+sudo apt-get -y install nginx
+echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
+sudo sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/404notfound.html
+sudo sed -i "/listen 80 default_server/a error_page 404 /404notfound.html; location = /404notfound.html { root /usr/share/nginx/html; internal; }" /etc/nginx/sites-available/default
+sudo service nginx start
