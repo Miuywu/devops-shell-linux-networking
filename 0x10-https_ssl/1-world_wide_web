@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Display subdomain info
+display()
+{
+    if [ "$#" -eq 2 ]; then
+        printf "The subdomain %s is a " "$2"
+        dig +nocmd "$2.$1" +noall +answer | awk '{printf $4}'
+        printf " record and points to "
+        dig "$2.$1" +short
+	return 0
+    else
+	for letter in www lb-01 web-01 web-02
+	do
+	    printf "The subdomain %s is a " "$letter"
+	    dig +nocmd "$letter"."$1" +noall +answer | awk '{printf $4}'
+	    printf " record and points to "
+	    dig "$letter"."$1" +short
+	done
+    fi
+}
+display $1 $2
