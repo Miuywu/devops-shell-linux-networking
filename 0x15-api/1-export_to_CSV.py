@@ -19,6 +19,6 @@ if __name__ == "__main__":
         writer = csv.writer(file, quoting=csv.QUOTE_NONNUMERIC,)
         for todo in all_todos:
             if str(todo.get('userId')) == strId:
-                taskStatus = todo.get('completed')
+                taskStatus = str(todo.get('completed'))
                 title = todo.get('title')
                 writer.writerow([strId, userName, taskStatus, title])
