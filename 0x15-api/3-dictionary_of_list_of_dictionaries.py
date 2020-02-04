@@ -12,7 +12,7 @@ if __name__ == "__main__":
     all_todos = requests.get(rURL2).json()
 
     big_dict = {}
-    for user in all_users:        
+    for user in all_users:
         todo_list = []
         user_id = user.get('id')
         for todo in all_todos:
