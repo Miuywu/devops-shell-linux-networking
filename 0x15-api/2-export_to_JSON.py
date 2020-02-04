@@ -27,5 +27,5 @@ if __name__ == "__main__":
 
     employeeDict = {strId: todo_list}
     derulo = strId + ".json"
-    with open(derulo, 'w', newline='') as file:
+    with open(derulo, 'w') as file:
         file.write(json.dumps(employeeDict))
