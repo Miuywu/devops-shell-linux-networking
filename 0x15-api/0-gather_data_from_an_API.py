@@ -29,4 +29,4 @@ if __name__ == "__main__":
         if str(todo.get('userId')) == strId:
             if todo.get('completed') is True:
                 title = todo.get('title')
-                print("\t" + title)
+                print("\t " + title)
