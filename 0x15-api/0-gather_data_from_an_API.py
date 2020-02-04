@@ -9,16 +9,16 @@ if __name__ == "__main__":
     strId = argv[1]  # employee ID number
     rURL = "https://jsonplaceholder.typicode.com/users/"
     user = requests.get(rURL + strId).json()
-    name = user['name']
+    name = user.get('name')
 
     rURL2 = "https://jsonplaceholder.typicode.com/todos"
     all_todos = requests.get(rURL2).json()
     totalTasks = 0
     tasksDone = 0
     for todo in all_todos:
-        if str(todo['userId']) == strId:
+        if str(todo.get('userId')) == strId:
             totalTasks += 1
-            if todo['completed'] is True:
+            if todo.get('completed') is True:
                 tasksDone += 1
 
     first_line = 'Employee {} is done with tasks({}/{}):'.format(name,
@@ -26,7 +26,7 @@ if __name__ == "__main__":
                                                                  totalTasks)
     print(first_line)
     for todo in all_todos:
-        if str(todo['userId']) == strId:
-            if todo['completed'] is True:
-                title = todo['title']
+        if str(todo.get('userId')) == strId:
+            if todo.get('completed') is True:
+                title = todo.get('title')
                 print("\t" + title)
