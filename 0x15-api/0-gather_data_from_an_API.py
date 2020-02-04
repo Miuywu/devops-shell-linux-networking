@@ -1,12 +1,10 @@
 #!/usr/bin/python3
 """ uses REST API to take in employee ID returns TODO list info """
 
-# from urllib import *
 import requests
 from sys import argv
 
 if __name__ == "__main__":
-    strId = argv[1]  # employee ID number
     rURL = "https://jsonplaceholder.typicode.com/users/"
     user = requests.get(rURL + strId).json()
     name = user.get('name')
