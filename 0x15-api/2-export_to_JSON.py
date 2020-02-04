@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     todo_list = []
     for todo in all_todos:
-        list_entry = {} 
+        list_entry = {}
         if str(todo.get('userId')) == strId:
             taskStatus = str(todo.get('completed'))
             title = todo.get('title')
@@ -24,7 +24,7 @@ if __name__ == "__main__":
             list_entry["completed"] = taskStatus
             list_entry["username"] = userName
             todo_list.append(list_entry)
-    
+
     employeeDict = {strId: todo_list}
     derulo = strId + ".json"
     with open(derulo, 'w', newline='') as file:
