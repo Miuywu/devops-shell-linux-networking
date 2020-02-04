@@ -18,7 +18,7 @@ if __name__ == "__main__":
     for todo in all_todos:
         list_entry = {}
         if str(todo.get('userId')) == strId:
-            taskStatus = str(todo.get('completed'))
+            taskStatus = todo.get('completed')
             title = todo.get('title')
             list_entry["task"] = title
             list_entry["completed"] = taskStatus
