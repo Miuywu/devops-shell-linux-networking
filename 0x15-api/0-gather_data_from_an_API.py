@@ -6,18 +6,19 @@ import requests
 from sys import argv
 
 if __name__ == "__main__":
-    strId = argv[1]# employee ID number
-
-    user = requests.get("https://jsonplaceholder.typicode.com/users/" + strId).json()
+    strId = argv[1]  # employee ID number
+    rURL = "https://jsonplaceholder.typicode.com/users/"
+    user = requests.get(rURL + strId).json()
     name = user['name']
 
-    all_todos = requests.get("https://jsonplaceholder.typicode.com/todos").json()
+    rURL2 = "https://jsonplaceholder.typicode.com/todos"
+    all_todos = requests.get(rURL2).json()
     totalTasks = 0
     tasksDone = 0
     for todo in all_todos:
         if str(todo['userId']) == strId:
             totalTasks += 1
-            if todo['completed'] == True:
+            if todo['completed'] is True:
                 tasksDone += 1
 
     first_line = 'Employee {} is done with tasks({}/{}):'.format(name,
@@ -26,7 +27,6 @@ if __name__ == "__main__":
     print(first_line)
     for todo in all_todos:
         if str(todo['userId']) == strId:
-            if todo['completed'] == True:
+            if todo['completed'] is True:
                 title = todo['title']
                 print("\t" + title)
-
