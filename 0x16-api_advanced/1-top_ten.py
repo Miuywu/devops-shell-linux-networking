@@ -7,10 +7,15 @@ def top_ten(subreddit):
     rURL = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     h = {"User-Agent": 'any agent'}
 
-    hot_data = requests.get(rURL, h, allow_redirects=False).json().get('data')
-    if hot_data is None:
+    derulo = requests.get(rURL, headers=h, allow_redirects=False).json()
+    if derulo is None:
         print(None)
-    else:
-        for a in range(10):
-            title = hot_data.get('children').get(str(a)).get('data')
-            print(title.get('title'))
+        return
+    data = derulo.get('data')
+    if data is None:
+        print(None)
+        return
+    post_list = data.get('children')
+    for a in range(10):
+        title = post_list[a].get('data').get('title')
+        print(title)
